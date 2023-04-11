@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Este es el componente Padre</h1>
-        <Lista props={todoList} />
+        <Lista props={todoList} isGreen={true} />
       </header>
     </div>
   );

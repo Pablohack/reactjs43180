@@ -7,12 +7,16 @@ Array.prototype.MapRetrocompatibleCoderHouse = function (calbackFN) {
 };
 
 const Lista = (todoList) => {
-  const { props } = todoList;
+  const { props, isGreen } = todoList;
   return (
     <div>
       <h1>Componte Hijo</h1>
       {props.map((list) => {
-        return <h1>{list}</h1>;
+        return (
+          <h1 style={isGreen ? { color: "green", fontSize: 14 } : null}>
+            {list}
+          </h1>
+        );
       })}
     </div>
   );
