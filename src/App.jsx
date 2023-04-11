@@ -2,7 +2,6 @@ import "./App.css";
 import Lista from "./Components/Lista";
 function App() {
   const todoList = ["Estudiar", "Pasear al perro", "Dormir"];
-  console.log([...todoList]);
   return (
     <div className="App">
       <header className="App-header">

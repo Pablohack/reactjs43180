@@ -1,3 +1,11 @@
+Array.prototype.MapRetrocompatibleCoderHouse = function (calbackFN) {
+  var arreglo = [];
+  for (var i = 0; i < this.length; i = i + 1) {
+    arreglo.push(calbackFN(this[i], i, this));
+  }
+  return arreglo;
+};
+
 const Lista = (todoList) => {
   const { props } = todoList;
   return (
