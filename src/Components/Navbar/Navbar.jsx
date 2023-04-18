@@ -1,7 +1,8 @@
 import CartWidget from "../CartWidget";
+import "./navbar.css";
 const NavBar = () => {
   return (
-    <div style={{ width: "100%", height: 200 }}>
+    <div className="navbar">
       <h1>Pablo Games</h1>
       <CartWidget />
     </div>

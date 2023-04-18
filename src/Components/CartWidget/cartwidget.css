@@ -1,0 +1,9 @@
+.cart-widget {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

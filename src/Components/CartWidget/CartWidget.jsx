@@ -1,6 +1,7 @@
+import "./cartwidget.css";
 const CartWidget = () => {
   return (
-    <div style={{ borderRadius: "100%", backgroundColor: "red" }}>
+    <div className="cart-widget">
       <p>1</p>
     </div>
   );
