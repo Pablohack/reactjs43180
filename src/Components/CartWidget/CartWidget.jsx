@@ -1,8 +1,10 @@
 import "./cartwidget.css";
+
 const CartWidget = () => {
   return (
     <div className="cart-widget">
-      <p>1</p>
+      <img className="cart-widget__icono-cart" />
+      <p className="cart-widget__contador">1</p>
     </div>
   );
 };

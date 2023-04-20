@@ -6,3 +6,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.primary {
+  background-color: blue;
+}
+
+.secondary {
+  background-color: blueviolet;
+}
