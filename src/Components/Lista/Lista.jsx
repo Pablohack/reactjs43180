@@ -1,16 +1,11 @@
 import Titulo from "../Titulo";
 
 const Lista = (todoList) => {
-  const { props, isGreen } = todoList;
+  const { lista } = todoList;
   return (
     <div>
-      <Titulo titulo="Estamos con componente titulo" />
-      {props.map((list) => {
-        return (
-          <h1 style={isGreen ? { color: "green", fontSize: 14 } : null}>
-            {list}
-          </h1>
-        );
+      {lista.map((list) => {
+        return <h2>{list.task}</h2>;
       })}
     </div>
   );
