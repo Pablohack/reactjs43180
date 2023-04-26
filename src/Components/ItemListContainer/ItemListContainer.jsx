@@ -1,9 +1,12 @@
+import ItemDetail from "../ItemDetail";
 const ItemListContainer = (props) => {
+  const { listPokemon } = props;
   return (
-    <div>
-      <h1>{props.titulo}</h1>
-      {props.children}
-    </div>
+    <>
+      {listPokemon.map((item) => {
+        return <ItemDetail {...item} />;
+      })}
+    </>
   );
 };
 
