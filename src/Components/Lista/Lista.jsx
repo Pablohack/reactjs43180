@@ -1,5 +1,3 @@
-import Titulo from "../Titulo";
-
 const Lista = (todoList) => {
   const { lista } = todoList;
   return (
