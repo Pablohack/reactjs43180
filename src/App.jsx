@@ -1,15 +1,13 @@
 import "./App.css";
-import Contador from "./Components/Contador/Contador";
 import { NavBar } from "./Components/Navbar/";
-import Formulario from "./Components/FormValidation/Container";
+import ItemListContainer from "./Components/ItemListContainer";
 
 function App() {
   return (
     <div className="">
       <header className="App-header">
         <NavBar />
-        {/* <Contador /> */}
-        <Formulario />
+        <ItemListContainer />
       </header>
     </div>
   );

@@ -1,0 +1,22 @@
+{
+  "juegos": [
+    {
+      "img": "",
+      "stock": 5,
+      "description": "juego de peleas",
+      "price": "$60"
+    },
+    {
+      "img": "",
+      "stock": 6,
+      "description": "juego de aventuras",
+      "price": "$60"
+    },
+    {
+      "img": "",
+      "stock": 10,
+      "description": "juego de magia",
+      "price": "$60"
+    }
+  ]
+}
