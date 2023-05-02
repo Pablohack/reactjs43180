@@ -1,0 +1,27 @@
+.item-count {
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 0 0 15px; */
+  border: 1px solid black;
+  width: 100%;
+}
+.item-count__container-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+.item-count__container-add-cart__btn,
+.item-count__container-button__btn {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.item-count__container__text {
+  margin: 0;
+}
+.item-count__container-add-cart {
+  margin-left: 16px;
+}

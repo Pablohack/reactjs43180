@@ -1,0 +1,8 @@
+.item {
+  margin: 16px;
+}
+
+.item__img {
+  width: 200px;
+  height: 200px;
+}
