@@ -1,10 +1,10 @@
-import CartWidget from "../CartWidget";
+import Cartwidget from "../Cartwidget";
 import "./navbar.css";
 export const NavBar = () => {
   return (
     <div className="navbar">
-      <h1>Pablo Games</h1>
-      <CartWidget />
+      <p className="navbar__title">PabloGames</p>
+      <Cartwidget />
     </div>
   );
 };

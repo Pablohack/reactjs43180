@@ -1,9 +1,11 @@
-import "./cartwidget.css";
-const CartWidget = () => {
+import { cartIcon } from "../../assets/img";
+import "./Cartwidget.css";
+const Cartwidget = () => {
   return (
     <div className="cart-widget">
-      <p>1</p>
+      <img className="cart-widget__icon" src={cartIcon} />
+      <p className="cart-widget__total-shopping">1</p>
     </div>
   );
 };
-export default CartWidget;
+export default Cartwidget;
