@@ -1,6 +1,6 @@
 import Titulo from "../Titulo/Titulo";
 import { useCount } from "./hook/useCount";
-const Contador = () => {
+const Counter = () => {
   const { count, decrement, increment, reset } = useCount(1, 0, 10);
 
   return (
@@ -13,4 +13,4 @@ const Contador = () => {
   );
 };
 
-export default Contador;
+export default Counter;
