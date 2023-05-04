@@ -14,3 +14,10 @@
   font-size: 24px;
   text-shadow: 0px 3px 6px;
 }
+
+.navbar__category {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-evenly;
+}
