@@ -1,11 +1,12 @@
 .item-count {
   display: flex;
-  align-items: center;
   display: flex;
   align-items: center;
   /* box-shadow: 0 0 15px; */
   border: 1px solid black;
   width: 100%;
+  height: 50px;
+  justify-content: center;
 }
 .item-count__container-button {
   display: flex;
@@ -13,8 +14,8 @@
   align-items: center;
   width: 100px;
 }
-.item-count__container-add-cart__btn,
-.item-count__container-button__btn {
+div.item-count__container-add-cart__btn,
+div.item-count__container-button__btn {
   height: 20px;
   display: flex;
   align-items: center;

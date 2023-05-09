@@ -1,5 +1,6 @@
 .item {
   margin: 16px;
+  width: 300px;
 }
 
 .item__img {
