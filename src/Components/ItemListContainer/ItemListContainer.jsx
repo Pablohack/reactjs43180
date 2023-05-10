@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import mockJuegos from "../../producto.json";
 import Spinner from "react-bootstrap/Spinner";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [product, setProduct] = useState([]);
-
-  // usar useParams() para obtener el id de la categoria
-  // getListItem se debe llamar cada vez que cambie el id y filtrar por el id correspondiente,
-  // si el id de la categoria es undefined
+  const { categoryId } = useParams();
 
   const getListItem = new Promise((res, rej) => {
     setTimeout(() => {
@@ -18,10 +16,19 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     getListItem.then((res) => {
-      setProduct(res.juegos);
-    });
-  }, []);
+      const producto = res.juegos;
 
+      if (categoryId != 0) {
+        const productoFiltrado = producto.filter(
+          (prod) => prod.category == categoryId
+        );
+        setProduct(productoFiltrado);
+      } else {
+        setProduct(producto);
+      }
+    });
+  }, [categoryId]);
+  console.log(product);
   return product.length > 0 ? (
     <ItemList listaProductos={product} />
   ) : (

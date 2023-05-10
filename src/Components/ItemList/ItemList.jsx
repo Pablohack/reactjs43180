@@ -1,7 +1,6 @@
 import { Item } from "../Item";
 import "./ItemList.css";
 export const ItemList = ({ listaProductos }) => {
-  console.log(listaProductos);
   return (
     <div className="item-list">
       {listaProductos.map((producto) => {

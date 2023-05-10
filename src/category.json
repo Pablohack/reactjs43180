@@ -1,0 +1,20 @@
+{
+  "category": [
+    {
+      "id": 0,
+      "nombre": "Home"
+    },
+    {
+      "id": 1,
+      "nombre": "Ps4"
+    },
+    {
+      "id": 2,
+      "nombre": "Xbox one"
+    },
+    {
+      "id": 3,
+      "nombre": "Nintendo switch"
+    }
+  ]
+}

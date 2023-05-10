@@ -1,6 +1,8 @@
 {
   "juegos": [
     {
+      "id": 1,
+      "category": 1,
       "img": "https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/0kRqUeSBIbQzz7cen3c989c6.jpg?w=440&thumb=false",
       "stock": 5,
       "title": "the last of us",
@@ -8,6 +10,8 @@
       "price": "$60"
     },
     {
+      "id": 2,
+      "category": 3,
       "img": "https://image.api.playstation.com/vulcan/ap/rnd/202010/0205/xaOrA7ZIur35LkfIzxtOECFv.png",
       "stock": 6,
       "title": "Metal Gear",
@@ -15,6 +19,8 @@
       "price": "$60"
     },
     {
+      "id": 3,
+      "category": 2,
       "img": "https://gmedia.playstation.com/is/image/SIEPDC/hogwarts-legacy-screen-01-ps5-en-02oct20?$1600px$",
       "stock": 10,
       "title": "Harry potter",
