@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = () => {
   const { state } = useLocation();
   const { img, description, stock, price } = state;
-  const [changeCount, setChangeCount] = useState("button");
-  const handlerChangeCount = () => {
-    setChangeCount("select");
+  const { addProduct } = useContext(CartContext);
+
+  const handlerCount = (count) => {
+    addProduct(count);
   };
 
   return (
@@ -20,12 +22,7 @@ const ItemDetail = () => {
         <p>Descripcion: {description}</p>
       </div>
       <div>Precio: {price}</div>
-      <input
-        type="button"
-        value="cambiar contador"
-        onClick={handlerChangeCount}
-      />
-      <ItemCount type={changeCount} maxCount={stock} />
+      <ItemCount onChangeCount={(e) => handlerCount(e)} maxCount={stock} />
     </div>
   );
 };
