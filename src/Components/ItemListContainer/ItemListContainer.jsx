@@ -12,21 +12,20 @@ const ItemListContainer = () => {
   const getListItem = new Promise((res, rej) => {
     setTimeout(() => {
       res(mockJuegos);
-    }, 5000);
+    }, 100);
   });
 
   useEffect(() => {
     getListItem.then((res) => {
       const producto = res.juegos;
-
-      if (categoryId != 0) {
+      if (categoryId) {
         const productoFiltrado = producto.filter(
-          (prod) => prod.category == categoryId
+          (prod) => prod.category == categoryId || categoryId == 0
         );
         setProduct(productoFiltrado);
-      } else {
-        setProduct(producto);
+        return;
       }
+      setProduct(producto);
     });
   }, [categoryId]);
 
