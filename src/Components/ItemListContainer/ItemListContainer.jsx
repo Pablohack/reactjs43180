@@ -3,6 +3,7 @@ import { ItemList } from "../ItemList/ItemList";
 import mockJuegos from "../../producto.json";
 import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
+import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
   const [product, setProduct] = useState([]);
@@ -11,7 +12,7 @@ const ItemListContainer = () => {
   const getListItem = new Promise((res, rej) => {
     setTimeout(() => {
       res(mockJuegos);
-    }, 2000);
+    }, 5000);
   });
 
   useEffect(() => {
@@ -28,12 +29,11 @@ const ItemListContainer = () => {
       }
     });
   }, [categoryId]);
-  console.log(product);
+
   return product.length > 0 ? (
     <ItemList listaProductos={product} />
   ) : (
-    <Spinner animation="grow" />
+    <Spinner className="spinner" />
   );
 };
-
 export default ItemListContainer;
