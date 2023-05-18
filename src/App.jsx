@@ -1,15 +1,29 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import "./App.css";
 import ItemListContainer from "./Components/ItemListContainer";
 import { NavBar } from "./Components/Navbar/";
 import ItemDetailContainer from "./Components/ItemDetail";
-import categoryMock from "./category.json";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { getCollection, getDocument } from "./utils/getFirestore";
 
 function App() {
+  const [categoria, setCategoria] = useState();
+
+  useEffect(() => {
+    getCollection("categorias").then((result) => {
+      setCategoria(result);
+    });
+
+    getDocument("categorias", "TZUMll9vBtuZaanF9o4f").then((result) => {
+      console.log(result);
+    });
+  }, []);
+
   return (
     <BrowserRouter>
-      <NavBar category={categoryMock.category} />
+      {categoria ? <NavBar category={categoria} /> : null}
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
