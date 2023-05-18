@@ -1,7 +1,10 @@
-.greenClass {
-  color: green;
+.item-detail {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
 }
 
-.redClass {
-  color: red;
+.item-detail__item-count {
+  width: 30%;
 }

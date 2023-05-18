@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import "./ItemCount.css";
 import { useCount } from "./hook/useCount";
 
-const ItemCount = ({ type, maxCount, onChangeCount }) => {
+const ItemCount = ({ maxCount, onChangeCount, className }) => {
   const { count, decrement, increment } = useCount(1, 0, maxCount);
 
   const handlerClick = () => {
@@ -11,7 +11,7 @@ const ItemCount = ({ type, maxCount, onChangeCount }) => {
   };
 
   return (
-    <div className="item-count">
+    <div className={`item-count ${className}`}>
       <div className="item-count__container-button">
         <Button
           className="item-count__container-button__btn"

@@ -13,8 +13,8 @@ const ItemDetail = ({ selected }) => {
   };
 
   return (
-    <div>
-      <h1 className={selected ? "greenClass" : "redClass"}>detalle del item</h1>
+    <div className="item-detail">
+      <h1>detalle del item</h1>
       <div>
         <img src={img} width={300} height={300} />
       </div>
@@ -22,7 +22,11 @@ const ItemDetail = ({ selected }) => {
         <p>Descripcion: {description}</p>
       </div>
       <div>Precio: {price}</div>
-      <ItemCount onChangeCount={(e) => handlerCount(e)} maxCount={stock} />
+      <ItemCount
+        onChangeCount={(e) => handlerCount(e)}
+        maxCount={stock}
+        className={"item-detail__item-count"}
+      />
     </div>
   );
 };
