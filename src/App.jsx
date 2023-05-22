@@ -15,10 +15,6 @@ function App() {
     getCollection("categorias").then((result) => {
       setCategoria(result);
     });
-
-    getDocument("categorias", "TZUMll9vBtuZaanF9o4f").then((result) => {
-      console.log(result);
-    });
   }, []);
 
   return (

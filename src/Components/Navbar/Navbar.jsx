@@ -2,7 +2,6 @@ import Cartwidget from "../Cartwidget";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 export const NavBar = ({ category }) => {
-  console.log(category);
   return (
     <div className="navbar">
       <p className="navbar__title">PabloGames</p>
