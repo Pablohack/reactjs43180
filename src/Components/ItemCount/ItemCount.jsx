@@ -21,6 +21,7 @@ const ItemCount = ({
   };
 
   const handlerUpdateCart = () => {
+    console.log("1");
     onClickUpdateCart(count);
   };
 

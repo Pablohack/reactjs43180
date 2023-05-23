@@ -3,7 +3,11 @@ import { useLocation } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
 import "./ItemDetail.css";
-import { createOrder, updateOrder } from "../../utils/createUpdatedFirestore";
+import {
+  createOrder,
+  updateOrder,
+  updateBatchOrders,
+} from "../../utils/createUpdateFirestore";
 
 const ItemDetail = ({ selected }) => {
   const { state } = useLocation();
@@ -14,20 +18,22 @@ const ItemDetail = ({ selected }) => {
     addProduct(count);
   };
 
-  const handlerAddCart = (count) => {
+  const handlerAddOrder = (count) => {
     const item = {
       name: title,
       price: price,
-      total: count,
+      total: count * price,
     };
+
     createOrder(item).then((result) => {
-      alert(result);
+      alert(`Se ha generadop la orden ${result}`);
       console.log(result);
     });
   };
 
-  const handlerUpdateCart = (count) => {
-    updateOrder(id, count);
+  const handlerUpdateOrder = () => {
+    updateBatchOrders();
+    alert("Actualizado");
   };
 
   return (
@@ -42,8 +48,8 @@ const ItemDetail = ({ selected }) => {
       <div>Precio: {price}</div>
       <ItemCount
         onChangeCount={(e) => handlerCount(e)}
-        onClickAddCart={(e) => handlerAddCart(e)}
-        onClickUpdateCart={(e) => handlerUpdateCart(e)}
+        onClickAddCart={(e) => handlerAddOrder(e)}
+        onClickUpdateCart={(e) => handlerUpdateOrder(e)}
         maxCount={stock}
         className={"item-detail__item-count"}
       />
